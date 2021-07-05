@@ -1,3 +1,12 @@
+function iniciar_estado(){
+    vista_actual = '';
+    g_rol = null;
+    g_url_fotos = 'https://minsal-fotos.s3.amazonaws.com/';
+    roles_activos = [];
+};
+
+iniciar_estado();
+
 const roles = {}
 
 

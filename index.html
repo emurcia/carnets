@@ -45,10 +45,11 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon rotate-n-0">
+                    <!--i class="fas fa-laugh-wink"></i-->
+                    <img src="img/Logo2.png" width="50px">
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">Carnetización <sup>MINSAL</sup></div>
             </a>
 
             <!-- Divider -->
@@ -337,7 +338,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small" id='menu_nombre_usuario'>Administrador</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -441,6 +442,16 @@
 
 </body>
 
+
+
+
+
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
 <!-- traido de proyecto registro-vacunacion -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"
 integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A=="
@@ -470,10 +481,6 @@ crossorigin="anonymous"></script>
 
 
 
-<!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 <!-- Core plugin JavaScript-->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
@@ -489,7 +496,6 @@ crossorigin="anonymous"></script>
         }
         catch (e) {
           destCookie();
-          destCookie2("edata");
           ui_token();
         }    
         
@@ -497,9 +503,10 @@ crossorigin="anonymous"></script>
       else {
         destCookie();
         iniciar_estado();
-        minsal_ui_cargar_vista('login', false)
+        //minsal_ui_cargar_vista('login', false);
+        //document.location.href='login.html';  --> activar cuando este el login listo
         $("#contenedormenu").html("");
-        $("#menu_nombre_usuario").html("");
+        $("#menu_nombre_usuario").html("Administrador");
       }
     }
   
